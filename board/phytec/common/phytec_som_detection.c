@@ -201,3 +201,13 @@ u8 __maybe_unused phytec_get_rev(struct phytec_eeprom_data *data)
 
 	return api2->pcb_rev;
 }
+
+u8 __maybe_unused phytec_get_som_type(struct phytec_eeprom_data *data)
+{
+	if (!data)
+		data = &eeprom_data;
+	if (data->api_rev < PHYTEC_API_REV2)
+		return PHYTEC_EEPROM_INVAL;
+
+	return data->data.data_api2.som_type;
+}
