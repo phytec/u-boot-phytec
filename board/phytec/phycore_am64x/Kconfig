@@ -18,6 +18,7 @@ config SYS_CONFIG_NAME
        default "phycore_am64x"
 
 source "board/phytec/common/Kconfig"
+source "board/phytec/common/k3/Kconfig"
 
 endif
 
@@ -33,6 +34,7 @@ config SYS_CONFIG_NAME
        default "phycore_am64x"
 
 source "board/phytec/common/Kconfig"
+source "board/phytec/common/k3/Kconfig"
 
 endif
 
